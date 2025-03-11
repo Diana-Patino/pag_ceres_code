@@ -11,7 +11,7 @@ body {
     color: var(--text-color);
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 25px 50px 50px 50px; /* Reduce la margen superior */
+    padding: 50px;
 }
 
 button {
@@ -118,23 +118,50 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-.mosaic {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.mosaic img {
-    width: 100%;
-    display: none;
-}
-
-.mosaic img.active {
-    display: block;
-}
-
 @media (max-width: 768px) {
     .productos {
         grid-template-columns: 1fr;
     }
+}
+
+.store.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two products per line */
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 40%;
+    margin-right: 20px;
+}
+
+.product-details {
+    width: 60%;
+}
+
+.product-details h2 {
+    margin: 0;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.rounded-box {
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
