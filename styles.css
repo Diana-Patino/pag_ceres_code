@@ -1,12 +1,21 @@
+:root {
+    --primary-color: #228B22;
+    --secondary-color: #4CAF50;
+    --text-color: rgb(9, 80, 22);
+    --background-color: white;
+    --hover-background-color: #d8f9d8;
+}
+
 body {
-    background-color: #228B22; /* Forest green */
-    color: rgb(9, 80, 22);
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
 }
+
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: var(--secondary-color);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -17,31 +26,47 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: white; /* Change background color to white */
-    border-radius: 10px; /* Add rounded borders */
+    background-color: var(--background-color);
+    border-radius: 10px;
+    display: flex; /* Añadir esta línea */
+    justify-content: space-around;
+    text-align: center;
 }
+
 nav ul li {
     float: left;
+    flex: 1;
+    justify-content: space-around;
+    text-align: center;
 }
+
 nav ul li a {
     display: block;
-    color: green; /* Change text color to green */
+    color: green;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    justify-content: space-around;
+    text-align: center;
 }
+
 nav ul li a:hover {
-    background-color: #111;
+    background-color: var(--hover-background-color);
+    justify-content: space-around;
+    text-align: center;
 }
+
 .categorias {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .categoria {
     border: 1px solid #ccc;
     padding: 20px;
@@ -49,31 +74,37 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     margin-bottom: 20px; /* Espacio entre categorías */
 }
+
 .productos {
     display: grid; /* Usar CSS Grid para las columnas de productos */
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
     gap: 10px; /* Espacio entre productos */
 }
+
 .producto {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* Espacio entre imagen y texto */
     margin: 10px;
     padding: 10px;
     background-color: #f0f0f0; /* Color de fondo */
 }
+
 .producto img {
-    max-width: 300px;
+    max-width: 40% /* Ajusta el tamaño según sea necesario */;
     border-radius: 10px;
     width: 400px; /* Ajusta el tamaño según sea necesario */
     height: auto;
 }
+
 .producto h3 {
     margin: 0;
 }
+
 .producto p {
     margin: 5px 0;
 }
+
 .producto a {
     display: inline-block;
     padding: 10px 20px;
@@ -82,9 +113,11 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
 }
+
 .producto a:hover {
     background-color: #0056b3;
 }
+
 @media (max-width: 768px) {
     .productos {
         grid-template-columns: 1fr;
