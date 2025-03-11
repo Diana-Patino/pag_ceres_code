@@ -1,0 +1,92 @@
+body {
+    background-color: #228B22; /* Forest green */
+    color: rgb(9, 80, 22);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: white; /* Change background color to white */
+    border-radius: 10px; /* Add rounded borders */
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: green; /* Change text color to green */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #111;
+}
+.categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.categoria {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Espacio entre categorías */
+}
+.productos {
+    display: grid; /* Usar CSS Grid para las columnas de productos */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px; /* Espacio entre productos */
+}
+.producto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0; /* Color de fondo */
+}
+.producto img {
+    max-width: 300px;
+    border-radius: 10px;
+    width: 400px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+.producto h3 {
+    margin: 0;
+}
+.producto p {
+    margin: 5px 0;
+}
+.producto a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.producto a:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
